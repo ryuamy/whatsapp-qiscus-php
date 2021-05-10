@@ -1,0 +1,21 @@
+{
+    "name": "ryuamy/whatsapp-qiscus-php",
+    "description": "Qiscus Whatsapp API Third Party PHP Library",
+    "type": "library",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Laksmi Setiawati",
+            "email": "laksmise@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Ryuamy\\WAQiscus\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=7.2.0"
+    }
+}
