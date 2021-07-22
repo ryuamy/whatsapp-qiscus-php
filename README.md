@@ -12,3 +12,10 @@ Install package with composer by following command:
 ```
 composer require ryuamy/whatsapp-qiscus-php
 ```
+
+
+## Call Package
+Add following code on your project:
+```php
+use Ryuamy\WAQiscus;
+```
