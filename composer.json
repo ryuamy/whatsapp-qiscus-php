@@ -1,7 +1,6 @@
 {
     "name": "ryuamy/whatsapp-qiscus-php",
     "description": "Qiscus Whatsapp API Third Party PHP Library",
-    "version": "1.0.0",
     "type": "library",
     "license": "GPL-3.0",
     "authors": [

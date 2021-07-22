@@ -53,7 +53,7 @@ class Validator
         if (count($missingParams)) {
             $implodedParams = implode(', ', $missingParams);
 
-            throw new \BadFunctionCallException("Parameter ${implodedParams} is required.");
+            throw new \BadFunctionCallException('Parameter '. $implodedParams . ' is required.');
         }
 
         return new self();
@@ -85,14 +85,14 @@ class Validator
      *
      * @return void
      */
-    public static function validateResponseCode(int $responseCode): void
+    public static function validateResponseCode(int $responseCode, string $responseBody): void
     {
-        if ($responseCode !== 200) {
+        if ($responseCode !== 200 && $responseCode !== 201) {
             if (isset(self::$invalidResponseCode[$responseCode])) {
-                throw new \ErrorException("Qiscus API Response Code: ${responseCode}. " . self::$invalidResponseCode[$responseCode] . ".");
+                throw new \ErrorException('Qiscus API Response Code: ' . $responseCode. '. ' . $responseBody . '. ' . self::$invalidResponseCode[$responseCode] . '.');
             }
 
-            throw new \ErrorException("Invalid Qiscus API Response Code: ${responseCode}");
+            throw new \ErrorException('Invalid Qiscus API Response Code: ' . $responseCode);
         }
     }
 }

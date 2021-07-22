@@ -83,7 +83,7 @@ class Api
         $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         curl_close($ch);
 
-        Validator::validateResponseCode($httpCode);
+        Validator::validateResponseCode($httpCode, $httpRequest);
 
         return json_decode($httpRequest);
     }
